@@ -17,15 +17,15 @@ body {
 .containerHeader {
   height: 200px;
   width: 100%;
-  background-color: green;
+  background-color: black;
 }
 .containerMain {
   background-color: white;
   width: 600px;
   height: 600px;
   display: grid;
-  grid-template-columns: repeat(4, auto);
-  grid-template-rows: repeat(4, auto);
+  grid-template-columns: repeat(6, auto);
+  grid-template-rows: repeat(6, auto);
 
   /* align-items: stretch; */
   /* flex-wrap: wrap; */
@@ -59,4 +59,8 @@ body {
 
 .hidden {
   display: none;
+}
+
+.hover {
+  background-color: black;
 }
