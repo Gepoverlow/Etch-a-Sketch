@@ -2,10 +2,10 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  background-color: teal;
 }
 
 body {
-  background-color: black;
 }
 .containerAll {
   display: flex;
@@ -15,9 +15,17 @@ body {
 }
 
 .containerHeader {
-  height: 200px;
+  height: 150px;
   width: 100%;
-  background-color: black;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title {
+  color: thistle;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 100px;
 }
 .containerMain {
   background-color: white;
@@ -33,9 +41,8 @@ body {
   /* flex-direction: row-reverse; */
 }
 .containerFooter {
-  height: 200px;
+  height: 100px;
   width: 100%;
-  background-color: black;
   display: flex;
   justify-content: center;
 }
@@ -49,12 +56,24 @@ body {
 }
 
 .reset {
-  margin-top: 40px;
+  padding: 30px;
+  font-size: 20px;
 }
 
 .resetBtn {
   padding: 30px;
   font-size: 20px;
+  border-radius: 50px;
+  background-color: thistle;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.reSize {
+  padding: 30px;
+  font-size: 20px;
+  border-radius: 50px;
+  background-color: thistle;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .hidden {

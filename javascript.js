@@ -44,9 +44,9 @@ document.addEventListener("DOMContentLoaded", function () {
     container.appendChild(grid);
     grid.classList.add("grids");
   }
-  const grids = document.querySelectorAll(".grids");
+  let grids = document.querySelectorAll(".grids");
   for (let i = 0; i < grids.length; i++) {
-    grids[i].addEventListener("click", function () {
+    grids[i].addEventListener("mouseover", function () {
       grids[i].classList.add("hover");
     });
   }
@@ -56,12 +56,12 @@ document.addEventListener("DOMContentLoaded", function () {
       grids[i].classList.remove("hover");
     }
   });
-  const resize = document.querySelector(".test");
+  const resize = document.querySelector(".reSize");
   resize.addEventListener("click", function () {
-    let request = prompt("pick a number");
+    let request = prompt("pick a number from 1 to 53");
     let requested = request * request;
-    container.innerHTML = "";
     if (request > 0 && request <= 53) {
+      container.innerHTML = "";
       for (let i = 0; i < requested; i++) {
         let grid = document.createElement("div");
         container.appendChild(grid);
@@ -71,12 +71,21 @@ document.addEventListener("DOMContentLoaded", function () {
       }
       const grids = document.querySelectorAll(".grids");
       for (let i = 0; i < grids.length; i++) {
-        grids[i].addEventListener("click", function () {
+        grids[i].addEventListener("mouseover", function () {
           grids[i].classList.add("hover");
         });
       }
     } else {
-      prompt("The Number has to be between 1 and 54");
+      alert("The number needs to be from 1 to 53");
     }
+
+    const reset = document.querySelector(".resetBtn");
+    grids = document.querySelectorAll(".grids");
+
+    reset.addEventListener("click", function () {
+      for (let i = 0; i < grids.length; i++) {
+        grids[i].classList.remove("hover");
+      }
+    });
   });
 });
